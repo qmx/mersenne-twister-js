@@ -194,4 +194,12 @@ MersenneTwister.prototype.genrand_res53 = function() {
   return(a*67108864.0+b)*(1.0/9007199254740992.0); 
 } 
 
+MersenneTwister.prototype.next = function(max){
+    return this.random() * (1+max-0) + 0 ;
+}
+
+MersenneTwister.prototype.nextInt = function(max){
+    return parseInt(this.next(max), 10);
+}
+
 /* These real versions are due to Isaku Wada, 2002/01/09 added */
