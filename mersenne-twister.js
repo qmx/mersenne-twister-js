@@ -202,4 +202,9 @@ MersenneTwister.prototype.nextInt = function(max){
     return parseInt(this.next(max), 10);
 }
 
+/* generates a random integer, within +-max */
+MersenneTwister.prototype.nextSignedInt = function(max){
+    return parseInt((this.random() - 0.5) * max, 10);
+}
+
 /* These real versions are due to Isaku Wada, 2002/01/09 added */
